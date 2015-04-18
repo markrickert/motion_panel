@@ -4,7 +4,7 @@ A native [RubyMotion](http://www.rubymotion.com/) wrapper around the [Mixpanel](
 For updates, find me [here](http://www.tombroomfield.com) or [follow me on twitter](https://twitter.com/tom_broomfield)
 
 ##Installation
-Currently MotionPanel requires the [BubbleWrap](https://github.com/rubymotion/BubbleWrap) and the [AFMotion](https://github.com/clayallsopp/afmotion) RubyMotion libraries, please ensure these are installed.
+MotionPanel requires the [AFMotion](https://github.com/clayallsopp/afmotion) library, please ensure it is installed correctly.
 
 Gemfile
 ```ruby
@@ -44,7 +44,6 @@ The extra parameters are optional.
 - Better exceptions.
 - Specs.
 - Alternate interface for a better Ruby experience.
-- Better dependancy management.
 
 
 Feel free to shoot through a PR or open an issue.

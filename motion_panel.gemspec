@@ -5,4 +5,7 @@ Gem::Specification.new do |s|
   s.summary = 'Native Rubymotion gem for Mixpanel'
   s.description = 'A native Rubymotion wrapper around the Mixpanel API'
   s.authors     = ['Thomas Broomfield']
+  s.add_dependency 'motion-support', '0.2.6'
+  s.add_dependency 'bubble-wrap', '1.7.1'
+  s.add_dependency 'afmotion', '2.5'
 end
