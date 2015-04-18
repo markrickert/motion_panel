@@ -1,7 +1,6 @@
 class Mixpanel
-  @@mixpanel_token
-  @@event_manager
-
+  @@mixpanel_token = nil
+  @@event_manager = nil
   class << self
     def shared_instance_with_token(token)
       @@mixpanel_token = token
