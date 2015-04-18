@@ -38,13 +38,22 @@ Mixpanel.shared_instance.track('Example event', attribute: 'Value', second_attri
 ```
 The extra parameters are optional.
 
+## Tracking people
+Every user must have a distinct_id, this could be a database ID or an email address.
+
+To track a user
+
+```ruby
+Mixpanel.shared_instance.set_person(distinct_id, '$first_name' => 'Tom',
+                                                 '$last_name' => 'Broomfield',
+                                                 'occupation' => 'Developer')
+
+```
+Please be aware that the properties with the '$' prefix are special Mixpanel attributes. Refer to the Mixpanel documentation for more information.
 
 ##TODO
-- People management.
 - Better exceptions.
-- Specs.
 - Alternate interface for a better Ruby experience.
-
 
 Feel free to shoot through a PR or open an issue.
 
