@@ -8,6 +8,7 @@ $:.unshift("./lib/")
 require 'motion_panel'
 
 Motion::Project::App.setup do |app|
+  app.detect_dependencies = false
 end
 
 task :spec do
