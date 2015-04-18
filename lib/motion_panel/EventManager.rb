@@ -5,10 +5,9 @@ module Mixpanel
     end
 
     def track(event_name, params = {})
-      data = [event_json(event_name, params)].pack('m')
-      url = "http://api.mixpanel.com/track/?data=#{CGI.escape(data)}&verbose=1"
+      data = encode_64(event_json(event_name, params))
+      url = "http://api.mixpanel.com/track/?data=#{data}"
       AFMotion::JSON.get(url) do |result|
-        puts result.body
         yield result.body if block_given?
       end
     end
@@ -23,6 +22,10 @@ module Mixpanel
         }.merge(params)
       }
       BW::JSON.generate(hash)
+    end
+
+    def encode_64(json)
+      CGI.escape([json].pack('m'))
     end
   end
 end
