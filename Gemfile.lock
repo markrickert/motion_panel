@@ -4,7 +4,7 @@ PATH
     motion_panel (0.0.9)
       afmotion (= 2.5)
       bubble-wrap (~> 1.8)
-      motion-support (= 0.2.6)
+      motion-support (~> 0.2.6)
 
 GEM
   remote: https://rubygems.org/

@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   files.concat(Dir.glob('lib/**/*.rb'))
   s.files = files
 
-  s.add_dependency 'motion-support', '0.2.6'
+  s.add_dependency 'motion-support', '~> 0.2.6'
   s.add_dependency 'bubble-wrap', '~> 1.8'
   s.add_dependency 'afmotion', '2.5'
   s.add_development_dependency 'rake'
