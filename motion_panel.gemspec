@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/tombroomfield/motion_panel'
   s.license = 'MIT'
   s.add_dependency 'motion-support', '0.2.6'
-  s.add_dependency 'bubble-wrap', '1.7.1'
+  s.add_dependency 'bubble-wrap', '~> 1.8'
   s.add_dependency 'afmotion', '2.5'
   s.add_development_dependency 'rake'
 end

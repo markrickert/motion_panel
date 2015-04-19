@@ -3,7 +3,7 @@ PATH
   specs:
     motion_panel (0.0.9)
       afmotion (= 2.5)
-      bubble-wrap (= 1.7.1)
+      bubble-wrap (~> 1.8)
       motion-support (= 0.2.6)
 
 GEM
@@ -18,9 +18,7 @@ GEM
     afmotion (2.5)
       motion-cocoapods (>= 1.4.1)
       motion-require (>= 0.1)
-    bubble-wrap (1.7.1)
-      bubble-wrap-http (= 1.7.1)
-    bubble-wrap-http (1.7.1)
+    bubble-wrap (1.8.0)
     claide (0.8.1)
     cocoapods (0.36.4)
       activesupport (>= 3.2.15)
