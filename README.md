@@ -36,7 +36,6 @@ You can then use the shared instance to track events:
 ```ruby
 Mixpanel.shared_instance.track('Example event', attribute: 'Value', second_attribute: 'Second value')
 ```
-The extra parameters are optional.
 
 The following attributes will be included by default for every call:
 - app_version
