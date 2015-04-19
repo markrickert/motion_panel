@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'motion-support', '0.2.6'
   s.add_dependency 'bubble-wrap', '1.7.1'
   s.add_dependency 'afmotion', '2.5'
+  s.add_development_dependency 'rake'
 end
