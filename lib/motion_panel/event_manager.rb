@@ -38,7 +38,7 @@ module Mixpanel
         'event' => name,
         'properties' => {
           'token' => @token
-        }.merge(params)
+        }.merge(params).merge(Mixpanel.default_hash)
       }
       BW::JSON.generate(hash)
     end

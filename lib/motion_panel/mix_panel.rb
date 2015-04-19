@@ -17,7 +17,17 @@ class Mixpanel
       Mixpanel::ConfigManager
     end
 
+    def default_hash
+      { orientation: Device.orientation, ios_version: Device.ios_version,
+        retina: Device.retina?, app_version: app_version,
+        resolution: "#{Device.screen.width}, #{Device.screen.height}" }
+    end
+
     private
+
+    def app_version
+      NSBundle.mainBundle.infoDictionary["CFBundleShortVersionString"]
+    end
 
     def event_manager
       @@event_manager ||= Mixpanel::EventManager.new(mixpanel_token)

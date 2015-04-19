@@ -25,7 +25,7 @@ module Mixpanel
       hash = {
         '$token' => token,
         '$distinct_id' => distinct_id,
-        '$set' => params
+        '$set' => params.merge(Mixpanel.default_hash)
       }
       BW::JSON.generate(hash)
     end

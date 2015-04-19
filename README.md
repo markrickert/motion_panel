@@ -38,6 +38,13 @@ Mixpanel.shared_instance.track('Example event', attribute: 'Value', second_attri
 ```
 The extra parameters are optional.
 
+The following attributes will be included by default for every call:
+- app_version
+- ios_version
+- orientation
+- resolution
+- retina?
+
 ## Tracking people
 Every user must have a distinct_id, this could be a database ID or an email address.
 
@@ -59,6 +66,7 @@ Configuration can be changed through the Mixpanel.config object.
 ```
 
 ##TODO
+- Block on development and test environment configuration option.
 - Better exceptions.
 - Alternate interface for a better Ruby experience.
 
