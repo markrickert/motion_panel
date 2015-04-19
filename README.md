@@ -44,7 +44,7 @@ Every user must have a distinct_id, this could be a database ID or an email addr
 To track a user
 
 ```ruby
-Mixpanel.shared_instance.set_person(distinct_id, '$first_name' => 'Tom',
+Mixpanel.shared_instance.people.set(distinct_id, '$first_name' => 'Tom',
                                                  '$last_name' => 'Broomfield',
                                                  'occupation' => 'Developer')
 
