@@ -12,15 +12,20 @@ module Mixpanel
       end
     end
 
+    def people
+      people_manager
+    end
+
     def set_person(distinct_id, params = {})
-      data = encode_64(person_json(distinct_id, params))
-      url = "http://api.mixpanel.com/engage/?data=#{data}"
-      AFMotion::JSON.get(url) do |result|
-        yield result.body if block_given?
-      end
+      puts '## Set person is depreciated, please use people.set'
+      people_manager.set(distinct_id, params)
     end
 
     private
+
+    def people_manager
+      @people_manager ||= PeopleManager.new(@token)
+    end
 
     def event_json(name, params)
       hash = {
@@ -28,15 +33,6 @@ module Mixpanel
         'properties' => {
           'token' => @token
         }.merge(params)
-      }
-      BW::JSON.generate(hash)
-    end
-
-    def person_json(distinct_id, params)
-      hash = {
-        '$token' => @token,
-        '$distinct_id' => distinct_id,
-        '$set' => params
       }
       BW::JSON.generate(hash)
     end
