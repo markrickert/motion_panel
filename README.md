@@ -57,13 +57,19 @@ Mixpanel.shared_instance.people.set(distinct_id, '$first_name' => 'Tom',
 ```
 Please be aware that the properties with the '$' prefix are special Mixpanel attributes. Refer to the Mixpanel documentation for more information.
 
+You can also use the set_once method. This will work in the same way to the set method, except it will not overwrite existing property values. This is useful for properties like "First login date".
+
+```ruby
+Mixpanel.shared_instance.people.set_once(distinct_id, 'First login' => '19/04/2015')
+```
+
 ##Config
 Configuration can be changed through the Mixpanel.config object.
 
 ```ruby
-  Mixpanel.config.disable_on_simulator # Blocks all calls if device is a simulator. Default: false
-  Mixpanel.config.disable_in_development # Blocks all calls if app is in development environment. Default: false
-  Mixpanel.config.disable_in_test # Blocks all calls if app is in the test environment. Default: true
+Mixpanel.config.disable_on_simulator # Blocks all calls if device is a simulator. Default: false
+Mixpanel.config.disable_in_development # Blocks all calls if app is in development environment. Default: false
+Mixpanel.config.disable_in_test # Blocks all calls if app is in the test environment. Default: true
 ```
 
 ##TODO

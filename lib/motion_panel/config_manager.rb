@@ -19,7 +19,7 @@ module Mixpanel
         end
       end
 
-      attr_writer :disable_in_test?
+      attr_writer :disable_in_test
       def disable_in_test?
         if @disable_in_test.nil?
           true
