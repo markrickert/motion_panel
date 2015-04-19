@@ -51,6 +51,13 @@ Mixpanel.shared_instance.people.set(distinct_id, '$first_name' => 'Tom',
 ```
 Please be aware that the properties with the '$' prefix are special Mixpanel attributes. Refer to the Mixpanel documentation for more information.
 
+##Config
+Configuration can be changed through the Mixpanel.config object.
+
+```ruby
+  Mixpanel.config.disable_on_simulator # Blocks all calls if device is a simulator. Default: false
+```
+
 ##TODO
 - Better exceptions.
 - Alternate interface for a better Ruby experience.
