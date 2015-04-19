@@ -5,6 +5,7 @@ module Mixpanel
     end
 
     def track(event_name, params = {})
+      return false unless config.should_track?
       data = encode_64(event_json(event_name, params))
       url = "http://api.mixpanel.com/track/?data=#{data}"
       AFMotion::JSON.get(url) do |result|
@@ -18,10 +19,15 @@ module Mixpanel
 
     def set_person(distinct_id, params = {})
       puts '## Set person is depreciated, please use people.set'
+      return false unless config.should_track?
       people_manager.set(distinct_id, params)
     end
 
     private
+
+    def config
+      Mixpanel::ConfigManager
+    end
 
     def people_manager
       @people_manager ||= PeopleManager.new(@token)

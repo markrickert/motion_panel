@@ -13,6 +13,10 @@ class Mixpanel
       event_manager
     end
 
+    def config
+      Mixpanel::ConfigManager
+    end
+
     private
 
     def event_manager
