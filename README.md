@@ -62,6 +62,8 @@ Configuration can be changed through the Mixpanel.config object.
 
 ```ruby
   Mixpanel.config.disable_on_simulator # Blocks all calls if device is a simulator. Default: false
+  Mixpanel.config.disable_in_development # Blocks all calls if app is in development environment. Default: false
+  Mixpanel.config.disable_in_test # Blocks all calls if app is in the test environment. Default: true
 ```
 
 ##TODO
