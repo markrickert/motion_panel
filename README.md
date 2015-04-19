@@ -63,6 +63,12 @@ You can also use the set_once method. This will work in the same way to the set 
 Mixpanel.shared_instance.people.set_once(distinct_id, 'First login' => '19/04/2015')
 ```
 
+The add method will increment numerical values. A great example of this is tracking sign in count.
+
+```ruby
+Mixpanel.shared_instance.people.add(distinct_id, 'Log in count' => 1)
+```
+
 ##Config
 Configuration can be changed through the Mixpanel.config object.
 
